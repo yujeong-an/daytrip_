@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space2</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+</head>
+ <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,700&display=swap');
+
+    body{
+      font-family: 'Noto Sans KR', sans-serif;
+      font-family: 'Noto Sans', sans-serif;
+      box-sizing: border-box;
+      margin: 0;
+    }
+
+    .header {
+      text-align: right;
+      margin: 0px;
+      font-size: 16px;
+    }
+
+    .navbar-brand {
+      font-weight: 400;
+      font-size: 24px;
+      margin-left: 185px;
+    }
+
+    #navbarSupportedContent {
+       margin-right: 180px;
+       font-size: 14px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    h1 {
+      font-size: 34px;
+      font-weight: bold;
+      color: #7BD9D9;
+      margin-left: 215px;
+      margin-top: 80px;
+      margin-bottom: 28px;
+    }
+
+    h2 {
+      font-size: 17.5px;
+      font-weight: 400;
+      color: #828282;
+      margin-left: 215px;
+        margin-bottom: 36px;
+    }
+
+    .first {
+      color: #9A9A9A;
+      text-decoration: none;
+    } 
+
+    .second {
+          color: #7BD9D9;
+          text-decoration: none;
+        } 
+
+    .choice {
+       float: right;
+       margin-right: 215px;
+       /*margin-bottom: 10px;*/
+       font-size: 16px;
+       margin-top: -30px;
+    }
+
+    hr {
+      color: #AFAFAF;
+      width: 1090px;
+    }
+
+    .keyword {
+      margin: 0em auto;
+      font-size: 16px;
+      width: 1110px;
+      margin-top: 40px;
+      margin-left: 300px;
+    }
+
+    .cube {
+      background-color: #c9c9c9;
+      color: white;
+      border-radius: 15px;
+      float: left;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 40px;
+      padding: 5px 10.5px 5px 10.5px;
+    }
+
+     .cube:hover {
+      background-color: #7BD9D9;
+      color: white;
+      border-radius: 15px;
+      float: left;
+      margin-left: 10px;
+      margin-right: 10px;
+      padding: 5px 10.5px 5px 10.5px;
+    }
+
+    .imagee {
+        margin-left: 205px;
+        /*margin-right: 205px;*/
+        margin-top: 36px;
+
+    }
+
+    .image {
+      width: 350px;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 40px;
+      float: left;
+    }
+
+    #item1 {
+      float: left; 
+    }
+
+  #item1:hover { 
+      content: url(https://i.postimg.cc/g0BC4Vj6/hover.png); 
+    }
+
+    #item2 {
+      float: left; 
+    }
+
+  #item2:hover { 
+      content: url(https://i.postimg.cc/d0T6PrnC/hover.png); 
+    }
+
+  #item3 {
+      float: left; 
+    }
+
+  #item3:hover { 
+      content: url(https://i.postimg.cc/ydp8m34f/hover.png); 
+    }
+
+  #item4 {
+      float: left; 
+    }
+
+  #item4:hover { 
+      content: url(https://i.postimg.cc/0QKyC2kP/hover.png); 
+    }
+
+  #item5 {
+      float: left; 
+    }
+
+  #item5:hover { 
+      content: url(https://i.postimg.cc/6p4bwkpT/hover.png); 
+    }
+
+  #item6 {
+      float: left; 
+    }
+
+  #item6:hover { 
+      content: url(https://i.postimg.cc/gkQ4MgHp/hover.png); 
+    }
+
+  #item7 {
+      float: left; 
+    }
+
+  #item7:hover { 
+      content: url(https://i.postimg.cc/V6kjstW4/hover.png); 
+    }
+
+  #item8 {
+      float: left; 
+    }
+
+  #item8:hover { 
+      content: url(https://i.postimg.cc/MKpVy1kS/hover.png); 
+    }
+
+  #item9 {
+      float: left; 
+    }
+
+  #item9:hover { 
+      content: url(https://i.postimg.cc/TPV62L3y/hover.png); 
+    }
+
+  /*  .image2 {
+      width: 350px;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 40px;
+      float: left;
+    }
+
+    .image3 {
+      width: 350px;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 40px;
+        margin-bottom: 40px;
+      float: left;
+    }*/
+
+    .footer {
+      width: 100%;
+      height: 120px;
+      background-color: #e2e2e2;
+      margin-top: 72px;
+      color: #ababab;
+      padding-left: 160px;
+      padding-top: 50px;
+      font-size: 10px;
+      letter-spacing: 2px;
+    }
+
+    .footer-logo {
+      font-size: 20px;
+      font-weight: 700;
+      color: #ababab;
+      padding-left: 1250px;
+      padding-bottom: 15px;
+      background-color: #e2e2e2;
+      width: 100%;
+    }
+
+  /*  .clearfix{
+      clear: right;
+    }*/
+
+ </style>
+<body>
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+       <img src="https://i.postimg.cc/W4MZhmYv/image.jpg" height="24">
+    </a>
+    <div class="header">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="index.html">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="space1.html">SPACE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="reservation.html" tabindex="-1" aria-disabled="true">RESERVATION</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">MY PAGE</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+
+</nav>
+
+<h1>SPACE</h1>
+<h2>원하는 지역의 공간으로 하루여행 daytrip</h2>
+<!-- <a class="choice" href="#">분위기 / 지역</a> -->
+<div class="choice"><a class="first" href="space1.html">분위기ㅣ</a> 
+<a class="second" href="space2.html">지역</a></div>
+
+<hr>
+
+<div class="keyword">
+   <div class="cube">#전체</div> <div class="cube">#서울</div> <div class="cube">#제주</div> <div class="cube">#경기</div> 
+   <div class="cube">#강원</div> <div class="cube">#충북</div> <div class="cube">#충남</div> <div class="cube">#경남</div> 
+   <div class="cube">#경북</div> <div class="cube">#전남 </div> <div class="cube">#전북</div>
+</div>
+
+
+
+<!--  <div class="container">
+<img class="image" src="https://i.postimg.cc/LsjSkCv7/folki.png" width="350">
+<img class="image" src="https://i.postimg.cc/SsFm9FhH/cafedoh.png" width="350">
+<img class="image" src="https://i.postimg.cc/ThM5sWj3/image.png" width="350">
+
+<img class="image2" src="https://i.postimg.cc/LsjSkCv7/folki.png" width="350">
+<img class="image2" src="https://i.postimg.cc/SsFm9FhH/cafedoh.png" width="350">
+<img class="image2" src="https://i.postimg.cc/ThM5sWj3/image.png" width="350">
+
+<img class="image2" src="https://i.postimg.cc/LsjSkCv7/folki.png" width="350">
+<img class="image2" src="https://i.postimg.cc/SsFm9FhH/cafedoh.png" width="350">
+<img class="image2" src="https://i.postimg.cc/ThM5sWj3/image.png" width="350">
+</div>
+</div> -->
+
+<div class="container">
+      <img id="item1" class="image" src="https://i.postimg.cc/LsjSkCv7/folki.png">
+      <img id="item2" class="image" src="https://i.postimg.cc/SsFm9FhH/cafedoh.png">
+      <img id="item3" class="image" src="https://i.postimg.cc/ThM5sWj3/image.png">
+      <img id="item4" class="image" src="https://i.postimg.cc/J0rxtvHL/image.png">
+      <img id="item5" class="image" src="https://i.postimg.cc/Kc5FVTZk/image.png">
+      <img id="item6" class="image" src="https://i.postimg.cc/15X9xz79/image.png">          
+      <img id="item7" class="image" src="https://i.postimg.cc/0NmHvQmJ/image.png">
+      <img id="item8" class="image" src="https://i.postimg.cc/HnZJSPGC/image.png">
+      <img id="item9" class="image" src="https://i.postimg.cc/tgL6hc3Z/image.png">
+        <div class="clearfix"></div>
+    </div>
+
+<div class="footer">
+  <p><b>상호:(주)데이트립 대표자:이상호</b>
+  <br><br>서울 특별시 종로구 지하문로 9길 24, 2층(통인동) TEL : 1670-4123 (daytrip@daytrip.com)
+  <br>사업자등록번호: 676-87-00055 통신판매업신고 : 제2015-서울종로-0499호[사업자정보확인]
+  <br>관광사업자등록 : 일반여행업 2018-000049호(종로구청)</p>
+</div>
+<div class="footer-logo">daytrip</div>
+
+  
+</body>
+</html>

@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Main</title>
+
+   <!-- 부트스트랩에서 작성한 css코드를 내 웹사이트와 연결함 */ -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,700&display=swap');
+
+    body{
+      font-family: 'Noto Sans KR', sans-serif;
+      font-family: 'Noto Sans', sans-serif;
+      box-sizing: border-box;
+      margin: 0;
+    }
+
+    .header {
+      text-align: right;
+      margin: 0px;
+      font-size: 16px;
+    }
+
+    .navbar-brand {
+      font-weight: 400;
+      font-size: 24px;
+      margin-left: 185px;
+    }
+
+    #navbarSupportedContent {
+       margin-right: 180px;
+       font-size: 14px;
+    }
+
+    .carousel-item {
+      height: 400px;
+      /*background-repeat: no-repeat;
+      background-size: cover; */
+       background-repeat: no-repeat;
+       background-size: cover; 
+       text-align: center;
+    }
+    
+    .carousel-item.item1 {
+      background-image: url("https://i.postimg.cc/v8rMkZRK/image.png");
+      background-position: center;
+    }
+
+    .carousel-item.item2 {
+      background-image: url("https://i.postimg.cc/Df95N1kr/image.png");
+      background-position: center;
+    }
+
+    .carousel-item.item3 {
+      background-image: url("https://i.postimg.cc/TPr10MxM/image.png");
+      background-position: center;
+    }
+
+    .helper {
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+
+    .intro {
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: 70px;
+    }
+
+    .intro h2 {
+      font-size: 28px;
+      color: white;
+      font-family: 'Ubuntu', sans-serif;
+      font-style: italic;
+      font-weight: 700;
+      margin-top: 10px;
+      margin-bottom: 18px;
+    }
+
+    .intro h3 {
+      font-size: 15px;
+      color: white;
+      font-weight: 300;
+      margin-top: 0;
+      margin-bottom: 50px;
+    }
+
+    .intro a {
+      background-color: #7BD9D9;
+      border-radius: 5px;
+      padding: 10px 20px;
+      color: white;
+      font-weight: 300;
+      font-size: 12px;
+    }
+
+    .curationall {
+        float: left;
+       /* margin-top: 10px;*/
+        margin-bottom: 72px;
+        margin-left: 200px;
+        margin-right: 200px;
+        width: 1120px;
+   }
+
+    .curation {
+        background-size: cover; 
+        width: 250px;
+        height: 334px;
+        float: left;
+        margin-left: 15px;
+        margin-right: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px 0 #CCCCCC;
+    }
+
+    .tt {
+        color: white;
+        font-size: 16px;
+        font-weight: 700;
+        margin-left: 20px;
+        margin-top: 250px;
+    }
+
+
+    .ti {
+        color: white;
+        font-size: 10px;
+        font-weight: 400;
+        margin-left: 20px;
+        margin-top: 5px;
+    }
+
+  /*  .box {
+      background-color: #e2e2e2;
+      width: 100%;
+      height: 200px;
+    }*/
+
+    .reco {
+      float: left;
+    }
+
+    .reco .proname {
+      font-size: 10px;
+      color: white;
+      width: 92px;
+      height: 20px;
+      background-color: #b5e8e8;
+      border-radius: 10px;
+      padding-left: 6px;
+      padding-top: 3px;
+      margin-top: 8px;
+      margin-right: 63px;
+      margin-bottom: 15px ;
+    }
+
+    .reco .fol {
+      font-size: 13px;
+      color: white;
+      width: 52px;
+      height: 24px;
+      background-color: #b5e8e8;
+      border-radius: 5px;
+      padding-left: 7px;
+      padding-top: 2px;
+      margin-top: 6px;
+      margin-left: 3px;     
+    }
+
+    .fol:hover {
+      font-size: 13px;
+      color: #7BD9D9;
+      width: 52px;
+      height: 24px;
+      background-color: white;
+      border: 1px solid #7BD9D9;
+      border-radius: 5px;
+      padding-left: 7px;
+      padding-top: 2px;
+      margin-top: 6px;
+      margin-left: 3px;    
+    }
+
+    .recomm {
+        width: 1110px;
+        margin-left: 205px;
+        margin-right: 205px;
+        /*float: left;*/
+        background-color: #545454;
+    }
+
+    .recom {
+      float: left;
+      width: 350px;
+      height: 128px;
+      /*border: 1px solid #E5E5E5;*/
+      border-radius: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+      background-color: #f1f1f1;
+    }
+
+    .recom .nn {
+      margin-left: 120px;
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: 700;
+      color: #6d6d6d;
+    }
+
+    .recom .iff {
+      margin-left: 120px;
+      margin-top: 6px;
+      font-size: 13px;
+      color: #545454;
+    }
+
+    .recom .profile {
+      width: 80px;
+      height: 80px;
+      margin: 16px 20px 16px 20px;
+      border-radius: 40px;
+    }
+    
+    .newq {
+      width: 1095;
+      margin-left: 200px;
+      margin-right: 185px;
+      margin-top: 20px;
+    }
+
+    .course {
+      display: block;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+     /* margin-bottom: 20px;*/
+      border-radius: 5px;
+      width: 250px;
+      /*height: 334px;*/
+      margin-left: 15px;
+      margin-right: 15px;
+      float: left;
+    }
+
+    .course:hover {
+      text-decoration: none;
+    }
+
+    .course .course-img {
+      display: block;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    .course .info {
+      padding: 8px;
+    }
+
+    .course .info p {
+      font-size: 16px;
+      font-weight: 600;
+      color: #545454;
+      margin-top: 1px;
+      margin-bottom: 2px;
+      margin-left: 2px;
+    }
+
+    .course .info .lecturer {
+      font-size: 12px;
+      font-weight: 500;
+      color: #545454;
+    }
+
+    .course .info .lecturer img {
+      vertical-align: middle;
+      margin-left: 2px;
+    }
+    .course .info .lecturer .name {
+      vertical-align: middle;
+      margin-left: 5px;
+    }
+
+    h4 {
+      font-size: 19px;
+      font-weight: bold;
+      color: #747474;
+      margin-left: 215px;
+      margin-top: 72px;
+      margin-bottom: 28px;
+     /* text-decoration: underline;
+      text-decoration-color: #7BD9D9;*/
+    }
+
+    .haha {
+      font-size: 19px;
+      font-weight: bold;
+      color: #747474;
+      margin-left: 215px;
+      margin-top: 72px;
+      margin-bottom: -44px;
+     /* text-decoration: underline;
+      text-decoration-color: #7BD9D9;*/
+    }
+
+    u {
+    text-decoration: none;
+    border-bottom: 3px solid #7BD9D9;
+    }
+
+    .reservation {
+      margin-left: 215px;
+      margin-right: 215px;
+      margin-top: 20px;
+      text-decoration: none;
+    }
+
+    .sq1 {
+      width: 1090px;
+      height: 48px;
+      border: 1px solid #e2e2e2;
+      background-color: white;
+      margin-top: 10px;
+      padding-top: 4px;
+      padding-left: 8px;
+      font-size: 14.5px;
+      color: #545454;
+    }
+
+    .sq1:hover {
+      width: 1090px;
+      height: 48px;
+      border: 1px solid #e2e2e2;
+      background-color: #e2e2e2;
+      margin-top: 10px;
+    }
+
+    .sq2 {
+      width: 1090px;
+      height: 240px;
+      border: 1px solid #e2e2e2;
+      background-color: white;
+      margin-top: 10px;
+      padding-top: 4px;
+      padding-left: 8px;
+      font-size: 14.5px;
+      color: #545454;
+    }
+
+    .sq2:hover {
+      width: 1090px;
+      height: 240px;
+      border: 1px solid #e2e2e2;
+      background-color: #e2e2e2;
+      margin-top: 10px;
+    }
+
+    .footer {
+      width: 100%;
+      height: 120px;
+      background-color: #e2e2e2;
+      margin-top: 72px;
+      color: #ababab;
+      padding-left: 160px;
+      padding-top: 50px;
+      font-size: 10px;
+      letter-spacing: 2px;
+    }
+
+    .footer-logo {
+      font-size: 20px;
+      font-weight: 700;
+      color: #ababab;
+      padding-left: 1250px;
+      padding-bottom: 15px;
+      background-color: #e2e2e2;
+      width: 100%;
+    }
+
+    .clearfix{
+      clear: right;
+    }
+
+
+</style>
+
+<body>
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="main.html">
+       <img src="https://i.postimg.cc/W4MZhmYv/image.jpg" height="24">
+    </a>
+    <div class="header">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="main.html">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="space1.html">SPACE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="reservation.html" tabindex="-1" aria-disabled="true">RESERVATION</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">MY PAGE</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+
+</nav>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item item1 active">
+      <div class="helper"></div><div class="intro">
+        <h2>CELLOPHANE_B</h2>
+        <h3>다채롭게 채워진 쉼의 공간</h3>
+        <a href="#">방문하기</a>
+      </div>
+    </div>
+    <div class="carousel-item item2">
+       <div class="helper"></div><div class="intro">
+        <h2>OliveHaus</h2>
+        <h3>낡은 주택에 취향껏 오브제를 담다</h3>
+        <a href="#">방문하기</a>
+      </div>
+    </div>
+    <div class="carousel-item item3">
+       <div class="helper"></div><div class="intro">
+        <h2>Stay-Khaki</h2>
+        <h3>이채로운 도시의 풍경</h3>
+        <a href="#">방문하기</a>
+      </div>
+    </div>
+  </div>
+
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<div class="haha"><u>OOO님을 위한 공간 큐레이션</u></div>
+  <div class ="clearfix">
+  <div class="curationall">
+
+  <div class="curation" style="background-image: url(https://i.postimg.cc/zfmmqxHy/back1.png);">
+   <div class="tt">조용함과 한적함의 매력,<br>혜화동 공간 15곳</div>
+    <div class="ti">by DayTrip</div>
+  </div>
+
+  <div class="curation" style="background-image: url(https://i.postimg.cc/GttD8KqF/back2.png);">
+   <div class="tt">빌딩숲 곳곳 숨어있는,<br>힙한 을지로 공간 13곳</div>
+    <div class="ti">by DayTrip</div>
+  </div>
+
+  <div class="curation" style="background-image: url(https://i.postimg.cc/htT2t4JS/back3.png);">
+   <div class="tt">은은하고 고요하게,<br>조형미가 느껴지는 카페</div>
+    <div class="ti">by DayTrip</div>
+  </div>
+
+  <div class="curation" style="background-image: url(https://i.postimg.cc/X7LnrWT0/back4.png);">
+   <div class="tt">동양적인 멋이 묻어나는<br>서울근교 한옥카페</div>
+    <div class="ti">by DayTrip</div>
+ </div>
+</div>
+
+<!--  <div class="box"> -->
+  <h4><u>큐레이터 추천</u></h4>
+ <div class ="clearfix">
+ <div class="recomm">
+  <div class="recom">
+  <div class ="clearfix"><div class="reco"><img class="profile" src="https://i.postimg.cc/VNwwC3zp/Kakao-Talk-20210613-224605137-02.jpg"></div>
+  <div class="reco"><div class="proname"> ★TOP CURATOR</div></div>
+  <div class="reco"><div class="fol">팔로우</div></div>
+  <div class="nn">architechu</div> 
+  <div class="iff">좋은 공간을 널리 이롭게</div></div> 
+ </div>
+<!-- </div> -->
+
+ <div class="recom">
+  <div class ="clearfix"><div class="reco"><img class="profile" src="https://i.postimg.cc/vmhJ6Tqx/Kakao-Talk-20210613-224605137-01.jpg"></div>
+  <div class="reco"><div class="proname"> ★TOP CURATOR</div></div>
+  <div class="reco"><div class="fol">팔로우</div></div>
+  <div class="nn">chanifoto</div> 
+  <div class="iff">공간의 분위기를 담다</div></div> 
+ </div>
+
+ <div class="recom">
+  <div class ="clearfix"><div class="reco"><img class="profile" src="https://i.postimg.cc/rwky1dJf/Kakao-Talk-20210613-224605137-03.jpg"></div>
+  <div class="reco"><div class="proname"> ★TOP CURATOR</div></div>
+  <div class="reco"><div class="fol">팔로우</div></div>
+  <div class="nn">hyoshinkwak</div> 
+  <div class="iff">시선으로 공간을 기록합니다</div></div> 
+ </div>
+</div>
+</div>
+ 
+
+ <h4><u>TRENDING SPACE</u></h4>
+
+ <div class="newq">
+      <a href="#" class="course">
+        <img src="https://i.postimg.cc/J0rxtvHL/image.png" width="100%" class="course-img">
+
+        <div class="info">
+          <p>카페 산아래</p>
+          <div class="lecturer">
+            <img src="https://i.postimg.cc/FKKK3PpN/image.png" width="15" height="15"><span class="name">서울 강북구 ㅣ 뷰가 좋은 카페</span>
+        </div>
+       </div>
+      </a>
+   
+      <a href="#" class="course">
+        <img src="https://i.postimg.cc/Kc5FVTZk/image.png" width="100%" class="course-img">
+
+        <div class="info">
+          <p>로스트 인 내츄럴</p>
+          <div class="lecturer">
+            <img src="https://i.postimg.cc/FKKK3PpN/image.png" width="15" height="15"><span class="name">서울 성동구 ㅣ 모던한 음식점</span>
+        </div>
+       </div>
+      </a>
+       
+      <a href="#" class="course">
+        <img src="https://i.postimg.cc/ThM5sWj3/image.png" width="100%" class="course-img">
+
+        <div class="info">
+          <p>꾸비올로</p>
+          <div class="lecturer">
+            <img src="https://i.postimg.cc/FKKK3PpN/image.png" width="15" height="15"><span class="name">서울 마포구 ㅣ 아기자기한 쇼룸</span>
+        </div>
+       </div>
+      </a>
+
+      <a href="#" class="course">
+        <img src="https://i.postimg.cc/15X9xz79/image.png" width="100%" class="course-img">
+
+        <div class="info">
+          <p>여여로</p>
+          <div class="lecturer">
+            <img src="https://i.postimg.cc/FKKK3PpN/image.png" width="15" height="15"><span class="name">경기 이천시 ㅣ 차분한 티룸</span>
+        </div>
+       </div>
+      </a>
+    </div>
+  </div>
+
+<h4><u>빠른 대관예약</u></h4>
+ <div class ="clearfix">
+ 
+ <div class="reservation">
+  <div class="sq1">Name</div>
+  <div class="sq1">Date</div>
+  <div class="sq1">E-mail Address</div>
+  <div class="sq2">Message</div>
+ </div>
+</div>
+
+<div class="footer">
+  <p><b>상호:(주)데이트립 대표자:이상호</b>
+  <br><br>서울 특별시 종로구 지하문로 9길 24, 2층(통인동) TEL : 1670-4123 (daytrip@daytrip.com)
+  <br>사업자등록번호: 676-87-00055 통신판매업신고 : 제2015-서울종로-0499호[사업자정보확인]
+  <br>관광사업자등록 : 일반여행업 2018-000049호(종로구청)</p>
+</div>
+<div class="footer-logo">daytrip</div>
+
+
+
+
+
+<!-- 부트스트랩에서 반응형을 구현하기 위해 사용되는 외부요소 설치 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+</body>
+</html>

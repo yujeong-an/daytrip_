@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservation</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+</head>
+ <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,700&display=swap');
+
+    body{
+      font-family: 'Noto Sans KR', sans-serif;
+      font-family: 'Noto Sans', sans-serif;
+      box-sizing: border-box;
+      margin: 0;
+    }
+
+    .header {
+      text-align: right;
+      margin: 0px;
+      font-size: 16px;
+    }
+
+    .navbar-brand {
+      font-weight: 400;
+      font-size: 24px;
+      margin-left: 185px;
+    }
+
+    #navbarSupportedContent {
+       margin-right: 180px;
+       font-size: 14px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    h1 {
+      font-size: 34px;
+      font-weight: bold;
+      color: #7BD9D9;
+      margin-left: 215px;
+      margin-top: 80px;
+      margin-bottom: 28px;
+    }
+
+    h2 {
+      font-size: 17.5px;
+      font-weight: 400;
+      color: #828282;
+      margin-left: 215px;
+      margin-bottom: 36px;
+    }
+
+    hr {
+       color: #AFAFAF;
+       width: 1090px;
+    }
+
+    .ff-1 {
+       margin-left: 218px;
+       color: #545454;
+       font-size: 13px;
+       float: left;
+       margin-top: 5px;
+    }
+
+    .ff-2 {
+       margin-left: 215px;
+       color: #545454;
+       font-size: 13px;
+       float: left;
+       margin-top: 5px;
+    }
+
+    .square {
+       width: 120px;
+       height: 28px;
+       background-color: #e0e0e0;
+       float: left;
+       margin-left: 20px;
+       border-radius: 5px;
+    }
+
+    .square2 {
+       width: 120px;
+       height: 28px;
+       background-color: #e0e0e0;
+       float: left;
+       margin-left: 45px;
+       border-radius: 5px;
+    }
+
+    .sd {
+       margin-left: 218px;
+       color: #545454;
+       font-size: 13px;
+       float: left;
+       margin-top: 5px;
+    }
+
+    .td {
+       margin-left: 218px;
+       color: #545454;
+       font-size: 13px;
+       float: left;
+       background-color: #e0e0e0;
+       border-radius: 5px;
+       width: 100px;
+       height: 28px;
+       padding: 4.5px;
+       padding-left: 8px;
+    }
+
+    .td2 {
+       margin-left: 120px;
+       color: #545454;
+       font-size: 13px;
+       float: left;
+       background-color: #e0e0e0;
+       border-radius: 5px;
+       width: 100px;
+       height: 28px;
+        padding: 4.5px;
+        padding-left: 8px;
+    }
+
+    .td3 {
+       margin-left: 120px;
+       color: #545454;
+       font-size: 13px;
+       float: left;
+       background-color: #e0e0e0;
+       border-radius: 5px;
+       width: 100px;
+       height: 28px;
+       padding: 4.5px;
+       padding-left: 8px;
+    }
+
+    .td4 {
+       margin-left: 120px;
+       color: #545454;
+       font-size: 13px;
+       float: left;
+       background-color: #e0e0e0;
+       border-radius: 5px;
+       width: 100px;
+       height: 28px;
+       padding: 4.5px;
+       padding-left: 8px;
+    }
+
+    .search {
+       margin-top: 40px;
+       background-color: #7BD9D9;
+       border-radius: 20px;
+       width: 100px;
+       height: 36px;
+       padding-left: 20px;
+       padding-top: 5px;
+       margin-left: 700px;
+       color: white;
+    }
+     .search:hover {
+       margin-top: 40px;
+       background-color: white;
+       border: 2px solid #7BD9D9;
+       border-radius: 20px;
+       width: 100px;
+       height: 36px;
+       padding-left: 20px;
+       padding-top: 3px;
+       margin-left: 700px;
+       color: #7BD9D9;
+    }
+
+    .sort {
+       float: right;
+       margin-right: 215px;
+       color: #545454;
+       font-size: 13px;
+       margin-top: 80px;
+       margin-bottom: 0px;
+    }
+
+    .linee {
+       color: #545454;
+       margin-top: 10px;
+    }
+
+    .container {
+    	margin-left: 200px;
+    	margin-right: 200px;
+    	padding: 0px;
+    }
+
+    .image {
+      width: 530px;
+      margin-left: 15px;
+      margin-right: 15px;
+      margin-bottom: 40px;
+      float: left;
+    }
+
+    #item1 {
+      float: left; 
+    }
+
+    #item1:hover { 
+      content: url(https://i.postimg.cc/mDJfxw8C/hover.png); 
+    }
+
+    #item2 {
+      float: left; 
+    }
+
+  #item2:hover { 
+      content: url(https://i.postimg.cc/G3Pwgkv8/hover.png); 
+    }
+
+  #item3 {
+      float: left; 
+    }
+
+  #item3:hover { 
+      content: url(https://i.postimg.cc/HLS4kPGc/hover.png); 
+    }
+
+  #item4 {
+      float: left; 
+    }
+
+  #item4:hover { 
+      content: url(https://i.postimg.cc/50bdfyVN/hover.png); 
+    }
+
+  #item5 {
+      float: left; 
+    }
+
+  #item5:hover { 
+      content: url(https://i.postimg.cc/MHnswJvp/hover.png); 
+    }
+
+  #item6 {
+      float: left; 
+    }
+
+  #item6:hover { 
+      content: url(https://i.postimg.cc/Hnb6n44q/hover.png); 
+    }
+
+    .footer {
+      width: 100%;
+      height: 120px;
+      background-color: #e2e2e2;
+      margin-top: 72px;
+      color: #ababab;
+      padding-left: 160px;
+      padding-top: 50px;
+      font-size: 10px;
+      letter-spacing: 2px;
+    }
+
+    .footer-logo {
+      font-size: 20px;
+      font-weight: 700;
+      color: #ababab;
+      padding-left: 1250px;
+      padding-bottom: 15px;
+      background-color: #e2e2e2;
+      width: 100%;
+    }
+
+    .clearfix{
+      clear: both;
+    }
+
+ </style>
+<body>
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+       <img src="https://i.postimg.cc/W4MZhmYv/image.jpg" height="24">
+    </a>
+    <div class="header">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="index.html">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="space1.html">SPACE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="reservation.html" tabindex="-1" aria-disabled="true">RESERVATION</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">MY PAGE</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+
+</nav>
+
+<h1>RESERVATION</h1>
+<h2>원하는 날짜에 대관이 가능한 공간을 알아보세요!</h2>
+
+<hr>
+<div class="clearfix"><div class="ff-1">공간유형</div> <div class="square"></div> <div class="ff-2">ㅣ 이용날짜</div> <div class="square"></div></div>
+<hr>
+<div class="clearfix"><div class="sd">지역</div> <div class="square2"></div></div>
+<hr>
+<div class="clearfix"><div class="td">인원</div> <div class="td2">가격대</div> <div class="td3">공간유형</div> <div class="td4">분위기</div></div>
+<hr>
+
+<div class="search">seach →</div>
+
+<div class="clearfix"><P class="sort">▪최신순 ▪인기순 ▪높은가격순 ▪낮은가격순</P></div>
+<hr class="linee">
+
+<div class="clearfix">
+   <div class="container">
+      <img id="item1" class="image" src="https://i.postimg.cc/Sx2SJnzy/image.jpg">
+      <img id="item2" class="image" src="https://i.postimg.cc/5yLrhMHW/image.jpg">
+      <img id="item3" class="image" src="https://i.postimg.cc/4x2TbsVW/image.jpg">
+      <img id="item4" class="image" src="https://i.postimg.cc/PrRj1dm2/image.jpg">
+      <img id="item5" class="image" src="https://i.postimg.cc/br4mNVtH/image.jpg">
+      <img id="item6" class="image" src="https://i.postimg.cc/gkv72dgx/image.jpg">          
+       </div>
+    </div>
+
+<div class="footer">
+  <p><b>상호:(주)데이트립 대표자:이상호</b>
+  <br><br>서울 특별시 종로구 지하문로 9길 24, 2층(통인동) TEL : 1670-4123 (daytrip@daytrip.com)
+  <br>사업자등록번호: 676-87-00055 통신판매업신고 : 제2015-서울종로-0499호[사업자정보확인]
+  <br>관광사업자등록 : 일반여행업 2018-000049호(종로구청)</p>
+</div>
+<div class="footer-logo">daytrip</div>
+
+  
+</body>
+</html>
